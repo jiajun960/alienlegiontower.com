@@ -7,51 +7,61 @@
     <meta name="description" content="外星军团塔：终极在线策略游戏。">
     <link rel="canonical" href="https://alienlegiontower.com">
     <title>外星军团塔</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 使用CDN加载Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8VNPGTY01"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-P8VNPGTY01');
+    </script>
     <style>
-        /* Custom Styling */
-        .primary-color {
-            color: #007aff;
+        :root {
+            --primary-color: #007aff;
         }
-        .secondary-bg {
+        body {
             background-color: #f0f0f5;
+        }
+        .text-primary {
+            color: var(--primary-color);
         }
     </style>
 </head>
-<body class="font-sans bg-secondary-bg text-gray-900">
-    <!-- Header Section -->
-    <header class="bg-white shadow-md py-6 px-4">
-        <h1 class="text-center text-4xl font-bold text-primary-color">Alien Legion Tower</h1>
+<body class="font-sans">
+    <header class="bg-white shadow-md py-6">
+        <h1 class="text-center text-4xl font-bold text-primary">外星军团塔</h1>
     </header>
 
-    <!-- Main Content -->
-    <main class="max-w-screen-xl mx-auto px-4 py-8">
-        <!-- Embedded Game Iframe -->
-        <section class="mt-8">
-            <h2 class="text-xl font-semibold text-primary-color">Play the Game</h2>
-            <div class="mt-4">
-                <iframe src="https://cloud.onlinegames.io/games/2025/construct/293/tank-arena/index-og.html"
-                    width="100%" height="500px" frameborder="0" class="rounded-lg shadow-lg"></iframe>
+    <main class="container mx-auto px-4 py-8">
+        <section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold text-primary mb-4">开始游戏</h2>
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/construct/293/tank-arena/index-og.html"
+                    class="w-full h-[500px] rounded-lg"
+                    frameborder="0"
+                    allowfullscreen>
+                </iframe>
             </div>
         </section>
 
-        <!-- Game Description -->
-        <section class="mt-8">
-            <h2 class="text-2xl font-semibold text-primary-color">Game Features</h2>
-            <ul class="mt-4 space-y-2 text-lg">
-                <li>Multiplayer strategy gameplay</li>
-                <li>Customizable alien forces</li>
-                <li>Challenging missions and gameplay modes</li>
-                <li>Real-time tactical decision-making</li>
-                <li>Global leaderboards to track your progress</li>
+        <section class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-bold text-primary mb-4">游戏特色</h2>
+            <ul class="space-y-2 text-lg">
+                <li>✨ 多人策略游戏玩法</li>
+                <li>🚀 自定义外星部队</li>
+                <li>🎮 具有挑战性的任务和游戏模式</li>
+                <li>⚡ 实时战术决策</li>
+                <li>🏆 全球排行榜追踪进度</li>
             </ul>
         </section>
-
-        <!-- Footer Section -->
-        <footer class="mt-12 text-center py-6 text-sm text-gray-600">
-            <p>&copy; 2025 Alien Legion Tower. All Rights Reserved.</p>
-        </footer>
     </main>
+
+    <footer class="text-center py-6 text-gray-600">
+        <p>&copy; 2025 外星军团塔. 保留所有权利.</p>
+    </footer>
 </body>
 </html>
